@@ -7,7 +7,7 @@
     <title>Auto.Click</title>
     <link rel="stylesheet" href="style.css">
     <link rel="image/jpeg" href="logo.jpeg">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -20,9 +20,10 @@
             <option value="onetime">One Time</option>
             <option value="intervall">Intervall</option>
         </select>
-        <div class="content">
-
-        </div>
+        <div id="content"></div>
+        <button type="submit">
+            Start
+        </button>
     </form>
     <p>
         Author: Manuel Westermeier
