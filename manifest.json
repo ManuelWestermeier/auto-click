@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Auto.Click",
+    "description": "The way to automate clicks on webpages",
+    "version": "1.0",
+    "action": {
+        "default_popup": "page.html",
+        "default_icon": "logo.jpeg"
+    }
+}
