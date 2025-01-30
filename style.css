@@ -19,3 +19,7 @@ button,
 select {
     cursor: pointer;
 }
+
+::placeholder {
+    color: rgb(173, 244, 185);
+}
