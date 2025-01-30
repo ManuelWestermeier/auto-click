@@ -33,20 +33,22 @@ typeSelectElem.onchange();
 
 formElem.addEventListener("submit", e => {
     e.preventDefault();
-    if (typeSelectElem.value == "onetime") {
-        const [htmlSelector, timeToStart] = document.querySelectorAll("input").map(elem => elem.value);
-        const elem = document.querySelector(htmlSelector);
 
-        if (!elem) alert("Error: elem " + htmlSelector + " not found");
+    if (typeSelectElem.value == "onetime") {
+        const [htmlSelector, timeToStart] = document.querySelectorAll("input");
+        const elem = document.querySelector(htmlSelector.value);
+
+        if (!elem) return alert("Error: elem '" + htmlSelector.value + "' not found");
 
         setTimeout(() => {
             elem.click();
-        }, timeToStart * 1000);
+        }, parseInt(timeToStart) * 1000);
     } else {
-        const [htmlSelector, times, timeBetween] = document.querySelectorAll("input").map(elem => elem.value);
-        const elem = document.querySelector(htmlSelector);
+        const [htmlSelector, _times, timeBetween] = document.querySelectorAll("input");
+        const elem = document.querySelector(htmlSelector.value);
+        let times = parseInt(_times.value);
 
-        if (!elem) alert("Error: elem " + htmlSelector + " not found");
+        if (!elem) return alert("Error: elem '" + htmlSelector.value + "' not found");
 
         const interval = setInterval(() => {
             if (times-- < 0) {
@@ -54,6 +56,12 @@ formElem.addEventListener("submit", e => {
                 return;
             }
             elem.click();
-        }, timeBetween * 1000);
+        }, parseInt(timeBetween.value) * 1000);
     }
+
+    contentElem.innerHTML = `<h3>Suceed!👍</h3>`;
+
+    setTimeout(() => {
+        typeSelectElem.onchange();
+    }, 3000);
 });
