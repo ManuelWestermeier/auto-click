@@ -4,8 +4,9 @@
     "description": "The way to automate clicks on webpages",
     "version": "1.0",
     "permissions": [
-        "scripting",
-        "activeTab"
+        "storage",
+        "activeTab",
+        "scripting"
     ],
     "host_permissions": [
         "<all_urls>"

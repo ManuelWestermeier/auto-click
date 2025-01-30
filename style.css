@@ -23,3 +23,7 @@ select {
 ::placeholder {
     color: rgb(173, 244, 185);
 }
+
+li {
+    cursor: pointer;
+}

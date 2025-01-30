@@ -1,18 +1,8 @@
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    if (message.action === "clickElement") {
-        const elem = document.querySelector(message.selector);
-        if (!elem) {
-            alert("Error: Element '" + message.selector + "' not found.");
-            return;
-        }
-
-        let count = 0;
-        const interval = setInterval(() => {
-            if (count++ >= message.times) {
-                clearInterval(interval);
-                return;
-            }
-            elem.click();
-        }, message.delay * 1000);
+    if (message.action === "elementFound") {
+        chrome.storage.local.set({ lastSuccess: message.selector });
+        chrome.runtime.sendMessage({ action: "showSuccess", selector: message.selector });
+    } else if (message.action === "elementNotFound") {
+        chrome.runtime.sendMessage({ action: "showError", selector: message.selector });
     }
 });
