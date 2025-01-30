@@ -3,8 +3,28 @@
     "name": "Auto.Click",
     "description": "The way to automate clicks on webpages",
     "version": "1.0",
+    "permissions": [
+        "scripting",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
     "action": {
         "default_popup": "page.html",
         "default_icon": "logo.jpeg"
-    }
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "content.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
 }
