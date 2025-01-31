@@ -1,5 +1,7 @@
 # Auto.Click
 
+<img src="https://manuelwestermeier.github.io/auto-click/icons/logo.jpeg">
+
 The way to automate clicks on webpages
 
 [home page](https://manuelwestermeier.github.io/auto-click/)
