@@ -2,4 +2,6 @@
 
 The way to automate clicks on webpages
 
-[download extension](https://github.com/ManuelWestermeier/auto-click/archive/refs/heads/main.zip)
+[home page](https://manuelwestermeier.github.io/auto-click/)
+
+[download extension zip](https://github.com/ManuelWestermeier/auto-click/archive/refs/heads/main.zip)
