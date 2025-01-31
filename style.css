@@ -27,3 +27,7 @@ select {
 li {
     cursor: pointer;
 }
+
+a {
+    padding: 0;
+}
