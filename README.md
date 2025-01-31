@@ -1,6 +1,6 @@
 # Auto.Click
 
-<img src="https://manuelwestermeier.github.io/auto-click/icons/logo.jpeg">
+<img src="https://manuelwestermeier.github.io/auto-click/icons/logo-128.png">
 
 The way to automate clicks on webpages
 
